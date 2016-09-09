@@ -177,5 +177,6 @@
   	<module>spring-mvc-test</module>
   	<module>spring-redis-test</module>
   	<module>spring-shiro-test</module>
+  	<module>jdk-eight-test</module>
   </modules>
 </project>
