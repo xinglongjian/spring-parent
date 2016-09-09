@@ -9,6 +9,7 @@ public class SimpleController {
 
 	@RequestMapping("/simple")
 	public @ResponseBody String simple() {
+		System.out.println("dddsd");
 		return "Hello world!";
 	}
 
