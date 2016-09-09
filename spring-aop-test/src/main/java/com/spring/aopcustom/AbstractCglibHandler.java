@@ -1,4 +1,4 @@
-package com.spring.aop;
+package com.spring.aopcustom;
 
 import org.springframework.cglib.proxy.InvocationHandler;
 /**

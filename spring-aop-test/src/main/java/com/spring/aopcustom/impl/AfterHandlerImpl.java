@@ -1,8 +1,8 @@
-package com.spring.aop.impl;
+package com.spring.aopcustom.impl;
 
 import java.lang.reflect.Method;
 
-import com.spring.aop.AfterHandler;
+import com.spring.aopcustom.AfterHandler;
 /**
  * AfterHandler的实现类
  * 

@@ -213,6 +213,8 @@
   	<module>spring-redis-test</module>
   	<module>spring-shiro-test</module>
   	<module>jdk-eight-test</module>
+  	<module>spring-data-test</module>
+  	<module>spring-webapp-test</module>
   </modules>
   
   <build>

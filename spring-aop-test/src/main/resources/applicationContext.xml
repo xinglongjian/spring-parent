@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+	<!-- 前置通知 -->  
+    <bean id="beforeLogAdvice" class="com.spring.aopspring.BeforeHandlerModule"/>  
+    <!-- 后置通知 -->  
+    <bean id="afterLogAdvice" class="com.spring.aopspring.AfterHandlerModule"/>  
+	
+	<bean id="calculatorTarget" class="com.spring.beans.CalculatorImpl"/> 
+	
+		
+	<!-- 代理类作用: 生成代理类，织入通知 -->    
+  <bean id="userServProxy"  class="org.springframework.aop.framework.ProxyFactoryBean">  
+   <property name="interfaces">  
+   <!-- 可以添加多个接口 -->  
+    <list>  
+     <value>com.spring.beans.Calculator</value>  
+    </list>  
+   </property>  
+   <!-- 引入通知 -->  
+   <property name="interceptorNames">  
+    <list>  
+     <value>beforeLogAdvice</value>  
+     <value>afterLogAdvice</value>  
+    </list>  
+   </property>  
+   <!-- 目标对象 -->  
+   <property name="target" ref="calculatorTarget"/>  
+  </bean>  	
+		
+		
+</beans>

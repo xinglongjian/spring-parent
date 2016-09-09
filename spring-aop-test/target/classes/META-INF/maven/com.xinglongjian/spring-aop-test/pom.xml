@@ -6,4 +6,11 @@
     <artifactId>spring-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
+  <dependencies>
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>1.8.9</version>
+    </dependency>
+  </dependencies>
 </project>
