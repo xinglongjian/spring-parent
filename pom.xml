@@ -211,6 +211,7 @@
   	<module>spring-aop-test</module>
   	<module>spring-mvc-test</module>
   	<module>spring-redis-test</module>
+  	<module>spring-bean-test</module>
   	<module>spring-shiro-test</module>
   	<module>jdk-eight-test</module>
   	<module>spring-data-test</module>
