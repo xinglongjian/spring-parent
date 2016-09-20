@@ -33,7 +33,7 @@ public class StudentServiceTest {
 		}
 	}
 
-	@Test
+	/*@Test
 	public void testFindStudentById() {
 		Student student = studentService.findStudentById(1);
 		Assert.assertNotNull(student);
@@ -51,5 +51,5 @@ public class StudentServiceTest {
 		studentService.createStudent(student);
 		Student newStudent = studentService.findStudentById(id);
 		Assert.assertNotNull(newStudent);
-	}
+	}*/
 }
