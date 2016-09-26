@@ -1,4 +1,4 @@
-package com.spring.data.test;
+package com.spring.data.test.mybatis;
 
 import java.util.Date;
 import java.util.List;

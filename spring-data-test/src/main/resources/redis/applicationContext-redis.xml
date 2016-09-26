@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	<bean id="propertyConfigurerRedis" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">  
+        <property name="order" value="1" />  
+        <property name="ignoreUnresolvablePlaceholders" value="true" />  
+        <property name="locations">  
+            <list>  
+                <value>classpath:redis/redis-manager-config.properties</value>  
+            </list>  
+        </property>  
+    </bean>  
+    <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">  
+        <property name="maxActive" value="${redis.maxActive}" />  
+        <property name="maxIdle" value="${redis.maxIdle}" />  
+        <property name="maxWait" value="${redis.maxWait}" />  
+        <property name="testOnBorrow" value="${redis.testOnBorrow}" />  
+    </bean> 
+    
+    <bean id="jedisFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"/>	
+   
+   <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate">
+      <property name="connectionFactory" ref="jedisFactory"/>
+   </bean>
+</beans>

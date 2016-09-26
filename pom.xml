@@ -210,13 +210,13 @@
   <modules>
   	<module>spring-aop-test</module>
   	<module>spring-mvc-test</module>
-  	<module>spring-redis-test</module>
   	<module>spring-bean-test</module>
   	<module>spring-shiro-test</module>
   	<module>jdk-eight-test</module>
   	<module>spring-data-test</module>
     <module>spring-mq-test</module>
     <module>spring-webapp-test</module>
+    <module>spring-integration-test</module>
   </modules>
   
   <build>
