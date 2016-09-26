@@ -1,8 +1,8 @@
-package com.spring.data.mapper;
+package com.spring.data.mybatis.mapper;
 
 import java.util.List;
 
-import com.spring.data.domain.Student;
+import com.spring.data.mybatis.domain.Student;
 
 public interface StudentMapper {
 

@@ -8,8 +8,8 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.spring.data.domain.Student;
-import com.spring.data.service.StudentService;
+import com.spring.data.mybatis.domain.Student;
+import com.spring.data.mybatis.service.StudentService;
 
 public class StudentServiceTest {
 	private static StudentService studentService;

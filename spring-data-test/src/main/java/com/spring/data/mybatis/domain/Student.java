@@ -1,4 +1,4 @@
-package com.spring.data.domain;
+package com.spring.data.mybatis.domain;
 
 import java.util.Date;
 /**

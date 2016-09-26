@@ -1,4 +1,4 @@
-package com.spring.data;
+package com.spring.data.mybatis;
 
 import java.io.InputStream;
 

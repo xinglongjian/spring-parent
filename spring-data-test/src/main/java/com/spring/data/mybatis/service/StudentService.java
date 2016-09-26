@@ -1,4 +1,4 @@
-package com.spring.data.service;
+package com.spring.data.mybatis.service;
 
 import java.util.List;
 
@@ -6,9 +6,9 @@ import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.spring.data.MyBatisSqlSessionFactory;
-import com.spring.data.domain.Student;
-import com.spring.data.mapper.StudentMapper;
+import com.spring.data.mybatis.MyBatisSqlSessionFactory;
+import com.spring.data.mybatis.domain.Student;
+import com.spring.data.mybatis.mapper.StudentMapper;
 
 public class StudentService {
 	private Logger logger = LoggerFactory.getLogger(getClass());

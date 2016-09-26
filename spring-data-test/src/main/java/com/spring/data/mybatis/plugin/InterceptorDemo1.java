@@ -1,4 +1,4 @@
-package com.spring.data.plugin;
+package com.spring.data.mybatis.plugin;
 
 import java.util.Properties;
 
@@ -18,14 +18,14 @@ import org.slf4j.LoggerFactory;
  * 2016年9月23日 下午6:05:58
  */
 @Intercepts(value={@Signature(args={MappedStatement.class,Object.class},method="update",type=Executor.class)})
-public class InterceptorDemo2 implements Interceptor {
+public class InterceptorDemo1 implements Interceptor {
 
-	private Logger logger=LoggerFactory.getLogger(InterceptorDemo2.class);
+	private Logger logger=LoggerFactory.getLogger(InterceptorDemo1.class);
 	
 	@Override
 	public Object intercept(Invocation invocation) throws Throwable {
 		// TODO Auto-generated method stub
-		logger.debug(InterceptorDemo2.class.getName());
+		logger.debug(InterceptorDemo1.class.getName());
 		return invocation.proceed();
 	}
 
