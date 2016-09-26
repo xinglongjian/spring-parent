@@ -5,6 +5,10 @@
 	<typeAliases>
 		<typeAlias alias="Student" type="com.spring.data.domain.Student" />
 	</typeAliases>
+	<plugins>
+	   <plugin interceptor="com.spring.data.plugin.InterceptorDemo1"/>
+	   <plugin interceptor="com.spring.data.plugin.InterceptorDemo2"/>
+	</plugins>
 	<environments default="development">
 		<environment id="development">
 			<transactionManager type="JDBC" />
@@ -19,4 +23,5 @@
 	<mappers>
 		<mapper resource="com/spring/data/mapper/StudentMapper.xml" />
 	</mappers>
+	
 </configuration>

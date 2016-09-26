@@ -3,13 +3,13 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
+  
     <groupId>com.xinglongjian</groupId>
     <artifactId>spring-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>com.xinglongjian</groupId>
+  
   <artifactId>spring-webapp-test</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <name>spring-webapp-test Maven Webapp</name>
   <url>http://maven.apache.org</url>
@@ -20,6 +20,16 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+		<groupId>org.activiti</groupId>
+		<artifactId>activiti-engine</artifactId>
+		<version>5.21.0</version>
+	</dependency>
+	<dependency>
+		<groupId>org.activiti</groupId>
+		<artifactId>activiti-spring</artifactId>
+		<version>5.21.0</version>
+	</dependency>
   </dependencies>
   <build>
     <finalName>spring-webapp-test</finalName>

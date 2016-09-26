@@ -7,9 +7,7 @@
     <artifactId>spring-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>com.xinglongjian</groupId>
   <artifactId>jdk-eight-test</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <name>jdk-eight-test</name>
   <url>http://maven.apache.org</url>
   <properties>
