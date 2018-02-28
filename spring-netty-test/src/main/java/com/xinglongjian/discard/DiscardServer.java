@@ -5,6 +5,7 @@ package com.xinglongjian.discard;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
+import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelOption;
 import io.netty.channel.EventLoopGroup;
@@ -44,6 +45,12 @@ public class DiscardServer {
 
             // 绑定端口，开始接收进来的连接
             ChannelFuture f = b.bind(port).sync();
+            f.addListener(new ChannelFutureListener() {
+                @Override
+                public void operationComplete(ChannelFuture channelFuture) throws Exception {
+                    System.out.println("Channel completed !");
+                }
+            });
 
             //等待服务器关闭
             f.channel().closeFuture().sync();

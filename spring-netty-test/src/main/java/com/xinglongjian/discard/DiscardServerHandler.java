@@ -3,7 +3,6 @@
  */
 package com.xinglongjian.discard;
 
-import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
@@ -15,8 +14,9 @@ public class DiscardServerHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        ByteBuf in = (ByteBuf)msg;
-        System.out.println(in.toString(io.netty.util.CharsetUtil.US_ASCII));
+        // 实现ECHO,返回给客户端
+        ctx.write(msg);
+        ctx.flush();
     }
 
     @Override
